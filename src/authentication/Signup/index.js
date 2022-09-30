@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
 import { Redirect } from "react-router-dom";
-import { signup } from './authApi';
-import Button from '../components/Button';
-import MainLayout from '../layout/MainLayout';
+import { signup } from '../authApi';
+import Button from '../../components/Button';
+import MainLayout from '../../layout/MainLayout';
 
 const Signup = () =>{
     // state: form values
@@ -108,9 +108,8 @@ const Signup = () =>{
                         {error}
                     </div>
                     <div>
-                        <Button type="submit" className="btn" styles={{color:'white',fontSize:20, width:200, backgroundColor:'lightgreen',borderColor:"lightgreen"}}>Signin</Button>
+                        <Button type="submit" className="btn" styles={{color:'white',fontSize:20, width:200, backgroundColor:'lightgreen',borderColor:"lightgreen"}}>Signup</Button>
                     </div>
-                    
                 </div>
                 
             </div>

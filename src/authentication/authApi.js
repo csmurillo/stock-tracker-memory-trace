@@ -26,7 +26,7 @@ export const signin = userData =>{
 };
 export const saveAuth = ({token,user},next)=>{
     localStorage.setItem('authInfo',JSON.stringify(user));
-    localStorage.setItem('token',token);
+    localStorage.setItem('token',JSON.stringify(token));
     next();
 };
 export const isAuthenticated = ()=>{

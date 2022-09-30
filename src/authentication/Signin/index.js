@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
 import { Redirect } from "react-router-dom";
-import { signin, saveAuth } from './authApi';
-import Button from '../components/Button';
-import MainLayout from '../layout/MainLayout';
+import { signin, saveAuth } from '../authApi';
+import Button from '../../components/Button';
+import MainLayout from '../../layout/MainLayout';
 
 const Signin = () =>{
     // state: formvalues
@@ -61,7 +61,7 @@ const Signin = () =>{
     };
 
     const signinForm = ()=>(
-        <form onSubmit={handleSubmit} novalidate="novalidate">
+        <form onSubmit={handleSubmit} noValidate="noValidate">
             <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input id="email" name="email" type="email" className="form-control"
