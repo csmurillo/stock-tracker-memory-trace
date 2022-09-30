@@ -1,0 +1,64 @@
+/* top gainer/loser font headings */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@200&display=swap');
+
+#home{
+    /* height: 900px; */
+    /* overflow-y: auto;
+    overflow-x: hidden; */
+    /* background-color: rgb(243, 14, 14); */
+    font-family: 'Glory', sans-serif;
+}
+li{
+    font-family: 'Glory', sans-serif;
+}
+/* font */
+.custom-font-one{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600 !important;
+    text-align: center;
+}
+.custom-font-two{
+    font-size: 34px;
+    font-family: 'Quicksand', sans-serif;
+}
+.f-30{
+    font-size: 30px;
+}
+/* DOW JONES OVERIDE STYLES */
+.gtitle{
+    font-weight: 600 !important;
+}
+
+/* SLICK SLIDER OVERIDE STYLES */
+@media (min-width: 768px) {
+    .right-arrow{
+        position: absolute;
+        right: -10px;
+        top: 28%;
+        z-index: 99999;
+        font-size: 55px;
+    }
+}
+.slick-slider{
+    margin-left: 5%;
+    cursor:grab;
+}
+.right-arrow:hover,.left-arrow:hover{
+    cursor:pointer;
+}
+.right-arrow{
+    position: absolute;
+    right: -10px;
+    top: 28%;
+    z-index: 99999;
+    font-size: 55px;
+}
+.left-arrow{
+    position: absolute;
+    left: -7%;
+    top: 28%;
+    z-index: 99999;
+    font-size: 55px;
+}

@@ -1,0 +1,98 @@
+header{
+    min-height: 111px;
+}
+#header{
+    height:15vh;
+    min-height: 111px;
+    border-bottom: 1px solid rgb(128, 128, 128);
+    /* z-index: 2; */
+}
+
+#user-icon{
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+}
+#logo{
+    height:100px; width:120px;
+}
+#start{
+    height:100%;
+    width:30%;
+    min-width: 120px;
+    /* background-color: red; */
+}
+#end{
+    width:70%;
+    height: 100%;
+    /* background-color: green; */
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    #logo{
+        height:100px; width:120px;
+    }
+    #start{
+        height:100%;
+        width:30%;
+        min-width: 120px;
+        /* background-color: red; */
+    }
+    #end{
+        width:70%;
+        height: 100%;
+        /* background-color: green; */
+    }
+    #search-box-container{
+        width:75%;
+        height:100%;
+        background-color:'pink';
+    }
+    #header-options-container{
+        width:35%;
+        height:100%;
+        background-color:'blue';
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #logo{
+        height:100px; width:120px;
+    }
+    #start{
+        height:100%;
+        width:30%;
+        min-width: 120px;
+        /* background-color: red; */
+    }
+    #end{
+        width:70%;
+        height: 100%;
+        /* background-color: green; */
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #logo{
+        height:120px; width:120px;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #logo{
+        height:120px; width:150px;
+    }
+}
+/* phone */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #logo{
+        height:100px; width:105px;
+    }
+}
