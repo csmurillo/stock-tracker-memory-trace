@@ -1,0 +1,10 @@
+.errors{
+    height:10px;
+    font-size: 12px;
+    color:red;
+}
+#serverError{
+    height:40px; 
+    font-size: 22px;
+    color:red;
+}

@@ -14,7 +14,7 @@ const Settings = () =>{
         <MainLayout>
                 <div className="row">
                     <div className="security-options-container col-md-4 col-6 mb-3">
-                        <Link to="editprofile">
+                        <Link to="profile">
                             <div id="security-option-profile" className="security-options h-100 d-flex flex-column justify-content-center align-items-center border rounded">
                                 <CgProfile id="profile-icon" className="icons"></CgProfile>
                                 <div id="profile">Profile</div>

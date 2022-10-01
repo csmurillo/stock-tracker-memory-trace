@@ -11,6 +11,9 @@ import Home from "./pages/Home";
 import Account from "./pages/Account";
 import Settings from "./pages/Settings";
 
+// Settings Subpages
+import EditProfile from "./pages/EditProfile";
+
 const Routes = () =>{
     return (
         <BrowserRouter>
@@ -20,6 +23,7 @@ const Routes = () =>{
                 <Route path="/signup" exact component={Signup}/>
                 <PrivateRoute path="/account" exact component={Account}/>
                 <PrivateRoute path="/settings" exact component={Settings}/>
+                <PrivateRoute path="/profile" exact component={EditProfile}/>
             </Switch>
         </BrowserRouter>
     );
