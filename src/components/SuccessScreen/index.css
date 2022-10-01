@@ -1,0 +1,17 @@
+#success-screen{
+    position: absolute;
+    left:0; top:0;
+    width:100vw; height:100vh;
+    background-color: white;
+}
+#success-check-mark{
+    position: relative;
+    font-size: 100px;
+    color:rgb(30, 252, 30);
+}
+#success{
+    font-size: 40px;
+}
+#redirect-in-sec{
+    font-size: 12px;
+}

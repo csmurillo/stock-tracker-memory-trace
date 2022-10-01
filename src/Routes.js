@@ -13,6 +13,7 @@ import Settings from "./pages/Settings";
 
 // Settings Subpages
 import EditProfile from "./pages/EditProfile";
+import ChangePassword from "./pages/ChangePassword";
 
 const Routes = () =>{
     return (
@@ -24,6 +25,7 @@ const Routes = () =>{
                 <PrivateRoute path="/account" exact component={Account}/>
                 <PrivateRoute path="/settings" exact component={Settings}/>
                 <PrivateRoute path="/profile" exact component={EditProfile}/>
+                <PrivateRoute path="/changepassword" exact component={ChangePassword}/>
             </Switch>
         </BrowserRouter>
     );
