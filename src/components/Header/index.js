@@ -45,7 +45,7 @@ const Header = () =>{
                     <Link to="/account">
                         <button id="account" className="dropdown-item" type="button">Account</button>
                     </Link>
-                    <Link to="/security">
+                    <Link to="/settings">
                         <button id="security" className="dropdown-item" type="button">Settings</button>
                     </Link>
                     <button id="logout" className="dropdown-item" type="button">Logout</button>

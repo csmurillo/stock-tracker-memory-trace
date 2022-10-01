@@ -9,6 +9,7 @@ import Signup from "./authentication/Signup";
 
 import Home from "./pages/Home";
 import Account from "./pages/Account";
+import Settings from "./pages/Settings";
 
 const Routes = () =>{
     return (
@@ -18,6 +19,7 @@ const Routes = () =>{
                 <Route path="/signin" exact component={Signin}/>
                 <Route path="/signup" exact component={Signup}/>
                 <PrivateRoute path="/account" exact component={Account}/>
+                <PrivateRoute path="/settings" exact component={Settings}/>
             </Switch>
         </BrowserRouter>
     );

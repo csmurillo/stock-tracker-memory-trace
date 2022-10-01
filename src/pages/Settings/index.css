@@ -1,0 +1,21 @@
+a {
+    color: black;
+    text-decoration: none !important;
+}
+.security-options-container{
+    min-height: 200px;
+}
+.security-options{
+    color:rgb(196, 196, 196);
+}
+.security-options:hover{
+    color:rgb(0, 255, 64);
+    cursor: pointer;
+    box-shadow: 3px 5px 10px rgb(240, 240, 240);
+}
+#profile,#change-password,#sms-alerts,#delete-user{
+    color:rgb(0, 0, 0);
+}
+.icons{
+    font-size: 100px;
+}
