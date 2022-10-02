@@ -16,7 +16,6 @@ const StockPriceContext = (stockSymbol,updateGraphValues,updateGraphValuesPeriod
             setStockAlertPriceReached(false);
             setInWatchList(false);
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[inWatchList, stockAlertPriceReached]);
 
     useEffect(()=>{
@@ -48,13 +47,11 @@ const StockPriceContext = (stockSymbol,updateGraphValues,updateGraphValuesPeriod
             socketLivePrice.disconnect();
             socket.disconnect();
         };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     useEffect(()=>{
         updateGraphValuesPeriodic(stockPriceLive,stockPriceDateFormatLive);
         socketLivePrice.emit('onWatchList',{stockSymbol});
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[stockPriceLive]);
 
     const getDateFormatted = (hour,min)=>{
