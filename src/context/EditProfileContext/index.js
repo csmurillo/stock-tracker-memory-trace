@@ -29,7 +29,6 @@ const EditProfileContext = (validator)=>{
 
     const onHandleSubmit=(e)=>{
         e.preventDefault();
-        console.log(values);
         setErrors(validator(values));
         setSubmittingForm(true);
     };
@@ -71,7 +70,6 @@ const EditProfileContext = (validator)=>{
         updateProfile(authInfo._id,token,values).then((res)=>{
             const{error}=res;
             if(error){
-                console.log(error+'error here!!');
                 setErrors(error);
             }
             else{

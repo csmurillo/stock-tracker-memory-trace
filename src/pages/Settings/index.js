@@ -38,7 +38,7 @@ const Settings = () =>{
                         </Link>
                     </div>
                     <div className="security-options-container col-md-4 col-6 mb-3">
-                        <Link to="deleteaccount">
+                        <Link to="delete">
                             <div id="security-option-delete-user" className="security-options h-100 d-flex flex-column justify-content-center align-items-center border rounded">
                                 <AiOutlineUserDelete id="delete-user-icon" className="icons"></AiOutlineUserDelete>
                                 <div id="delete-user">Delete Account</div>

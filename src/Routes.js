@@ -15,6 +15,7 @@ import Settings from "./pages/Settings";
 import EditProfile from "./pages/EditProfile";
 import ChangePassword from "./pages/ChangePassword";
 import SmsAlerts from "./pages/SmsAlerts";
+import DeleteAccount from "./pages/DeleteAccount";
 
 const Routes = () =>{
     return (
@@ -28,6 +29,7 @@ const Routes = () =>{
                 <PrivateRoute path="/profile" exact component={EditProfile}/>
                 <PrivateRoute path="/changepassword" exact component={ChangePassword}/>
                 <PrivateRoute path="/smsalerts" exact component={SmsAlerts}/>
+                <PrivateRoute path="/delete" exact component={DeleteAccount}/>
             </Switch>
         </BrowserRouter>
     );
