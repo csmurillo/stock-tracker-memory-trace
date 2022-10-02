@@ -27,7 +27,7 @@ const Routes = () =>{
                 <PrivateRoute path="/settings" exact component={Settings}/>
                 <PrivateRoute path="/profile" exact component={EditProfile}/>
                 <PrivateRoute path="/changepassword" exact component={ChangePassword}/>
-                <PrivateRoute path="/alerts" exact component={SmsAlerts}/>
+                <PrivateRoute path="/smsalerts" exact component={SmsAlerts}/>
             </Switch>
         </BrowserRouter>
     );

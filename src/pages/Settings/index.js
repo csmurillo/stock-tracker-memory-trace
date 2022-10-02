@@ -30,7 +30,7 @@ const Settings = () =>{
                         </Link>
                     </div>
                     <div className="security-options-container col-md-4 col-6 mb-3">
-                        <Link to="alerts">
+                        <Link to="smsalerts">
                             <div id="security-option-enable-alerts" className="security-options h-100 d-flex flex-column justify-content-center align-items-center border rounded">
                                 <MdDialerSip id="enable-alerts-icon" className="icons"></MdDialerSip>
                                 <div id="sms-alerts">Sms Alerts</div>
