@@ -7,6 +7,9 @@ import PrivateRoute from "./authentication/PrivateRoute";
 import Signin from "./authentication/Signin";
 import Signup from "./authentication/Signup";
 
+// stock
+import Stock from "./pages/Stock";
+
 import Home from "./pages/Home";
 import Account from "./pages/Account";
 import Settings from "./pages/Settings";
@@ -24,6 +27,7 @@ const Routes = () =>{
                 <Route path="/" exact component={Home}/>
                 <Route path="/signin" exact component={Signin}/>
                 <Route path="/signup" exact component={Signup}/>
+                <Route path="/stock/:name" exact component={Stock}/>
                 <PrivateRoute path="/account" exact component={Account}/>
                 <PrivateRoute path="/settings" exact component={Settings}/>
                 <PrivateRoute path="/profile" exact component={EditProfile}/>
