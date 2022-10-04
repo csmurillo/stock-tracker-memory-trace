@@ -71,6 +71,7 @@ const StockContext = (path,socketLivePrice)=>{
 
     useEffect(()=>{
         const stock=path.split('/');
+        // alert('stock'+stock);
         const stockSymbol=stock[stock.length-1];
         setStockSymbol(stockSymbol);
 
