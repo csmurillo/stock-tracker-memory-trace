@@ -2,13 +2,13 @@ import React, {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 
 const Stock = () =>{
-    const { handle } = useParams();
+    const { name } = useParams();
     useEffect(()=>{
-        alert('PARAMS'+handle);
+        alert('PARAMS'+name);
     },[]);
 
     return (
-        <div>STOCK</div>
+        <div>STOCK {name}</div>
     );
 };
 export default Stock;
