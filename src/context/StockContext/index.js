@@ -96,7 +96,7 @@ const StockContext = (ticker,socketLivePrice)=>{
             setStockTimeMovement(stockData.time);
             setStockPriceMovement(stockData.price);
         });
-    },[path]);
+    },[ticker]);
 
     const updateGraphValues = (stockPriceLive,stockPriceTime)=>{
         if(currentTimeStamp==='day'){
