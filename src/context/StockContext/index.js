@@ -5,7 +5,7 @@ import { getStock, getStockPrice, getStockNews,getStockMovement,stockOnWatchList
 import { addToWatchList, updateWatchList,deleteWatchList } from '../../adapters/watchlistApi';
 import { getToken, isAuthenticated } from '../../authentication/authApi';
 
-const StockContext = (path,socketLivePrice)=>{
+const StockContext = (stockSymbol,socketLivePrice)=>{
 
     const authInfo = isAuthenticated();
     const token = getToken();
@@ -70,9 +70,6 @@ const StockContext = (path,socketLivePrice)=>{
     };
 
     useEffect(()=>{
-        const stock=path.split('/');
-        // alert('stock'+stock);
-        const stockSymbol=stock[stock.length-1];
         setStockSymbol(stockSymbol);
 
         stockOnWatchList(stockSymbol,authInfo._id,token).then(watchListInfo=>{
