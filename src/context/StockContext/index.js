@@ -5,7 +5,7 @@ import { getStock, getStockPrice, getStockNews,getStockMovement,stockOnWatchList
 import { addToWatchList, updateWatchList,deleteWatchList } from '../../adapters/watchlistApi';
 import { getToken, isAuthenticated } from '../../authentication/authApi';
 
-const StockContext = (stockSymbol,socketLivePrice)=>{
+const StockContext = (ticker,socketLivePrice)=>{
 
     const authInfo = isAuthenticated();
     const token = getToken();
@@ -70,7 +70,7 @@ const StockContext = (stockSymbol,socketLivePrice)=>{
     };
 
     useEffect(()=>{
-        setStockSymbol(stockSymbol);
+        setStockSymbol(ticker);
 
         stockOnWatchList(stockSymbol,authInfo._id,token).then(watchListInfo=>{
             const tempInWatchList=watchListInfo.inWatchList;
