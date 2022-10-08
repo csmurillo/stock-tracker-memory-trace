@@ -36,7 +36,6 @@ const Signin = () =>{
                     res.error.forEach(error=>{
                         if(error.field!=prevErrorType){
                             setErrors(errors=>{
-                                console.log(error);
                                 return {...errors,[error.field+'Error']:error.error}
                             });
                         }
