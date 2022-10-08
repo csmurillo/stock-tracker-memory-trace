@@ -5,7 +5,7 @@ import { getStock, getStockPrice, getStockNews,getStockMovement,stockOnWatchList
 import { addToWatchList, updateWatchList,deleteWatchList } from '../../adapters/watchlistApi';
 import { getToken, isAuthenticated } from '../../authentication/authApi';
 
-const StockContext = (ticker,socketLivePrice)=>{
+const StockContext = (tickerSymbol,socketLivePrice)=>{
 
     const authInfo = isAuthenticated();
     const token = getToken();
@@ -70,9 +70,9 @@ const StockContext = (ticker,socketLivePrice)=>{
     };
 
     useEffect(()=>{
-        setStockSymbol(ticker);
+        setStockSymbol(tickerSymbol);
 
-        stockOnWatchList(stockSymbol,authInfo._id,token).then(watchListInfo=>{
+        stockOnWatchList(tickerSymbol,authInfo._id,token).then(watchListInfo=>{
             const tempInWatchList=watchListInfo.inWatchList;
             const tempPriceTarget=watchListInfo.price;
             if(tempInWatchList){
@@ -83,20 +83,20 @@ const StockContext = (ticker,socketLivePrice)=>{
                 setInputPriceTarget(tempPriceTarget);
             }
         });
-        getStock(stockSymbol).then(stock=>{
+        getStock(tickerSymbol).then(stock=>{
             setStockInfo(stock);
         });
-        getStockPrice(stockSymbol).then(stockPriceInfo=>{
+        getStockPrice(tickerSymbol).then(stockPriceInfo=>{
             setStockPrice(stockPriceInfo);
         });
-        getStockNews(stockSymbol).then(news=>{
+        getStockNews(tickerSymbol).then(news=>{
             setStockNews(news.news.articles);
         });
-        getStockMovement(stockSymbol).then(stockData=>{
+        getStockMovement(tickerSymbol).then(stockData=>{
             setStockTimeMovement(stockData.time);
             setStockPriceMovement(stockData.price);
         });
-    },[ticker]);
+    },[tickerSymbol]);
 
     const updateGraphValues = (stockPriceLive,stockPriceTime)=>{
         if(currentTimeStamp==='day'){
@@ -120,7 +120,6 @@ const StockContext = (ticker,socketLivePrice)=>{
                     let time=stockTimeMovement[i].split(' ')[1];
                     let hour=parseInt(time.split(':')[0]);
                     let minute=parseInt(time.split(':')[1]);
-
                     if(stockPriceHour===hour&&stockPriceMinute>minute){
                         if(minute===55){
                             const stockPriceMovementClone=[...stockPriceMovement];
@@ -226,12 +225,5 @@ const StockContext = (ticker,socketLivePrice)=>{
 };
 
 export {StockContext};
-
-
-
-
-
-
-
 
 

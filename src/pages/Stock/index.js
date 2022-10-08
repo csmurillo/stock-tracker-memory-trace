@@ -172,5 +172,8 @@ const Stock = () =>{
         </MainLayout>
     );
 };
-// export default withRouter(Stock);
 export default Stock;
+
+
+
+
