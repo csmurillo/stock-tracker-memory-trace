@@ -10,6 +10,8 @@ import Signup from "./authentication/Signup";
 // stock
 import Stock from "./pages/Stock";
 
+import WatchList from "./pages/WatchList";
+
 import Home from "./pages/Home";
 import Account from "./pages/Account";
 import Settings from "./pages/Settings";
@@ -34,6 +36,7 @@ const Routes = () =>{
                 <PrivateRoute path="/changepassword" exact component={ChangePassword}/>
                 <PrivateRoute path="/smsalerts" exact component={SmsAlerts}/>
                 <PrivateRoute path="/delete" exact component={DeleteAccount}/>
+                <PrivateRoute path="/watchlist" exact component={WatchList}/>
             </Switch>
         </BrowserRouter>
     );

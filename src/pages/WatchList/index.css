@@ -1,0 +1,26 @@
+.card-container{
+    height: 100%; width: 100%;
+    /* background-color: aqua; */
+    flex: 1;
+}
+.watchlist-filter{
+    height:3em; width: 100%;
+    display:flex;
+    justify-content: flex-end;
+}
+.filter-btn{
+    margin-right: 1em;
+    padding:10px 15px;
+    border-radius: 15px;
+    background-color: lightgreen;
+    color:white;
+    border:none;
+}
+.watchlist-container{
+    width: 100%; height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    flex:1;
+}

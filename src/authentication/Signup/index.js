@@ -10,7 +10,7 @@ const Signup = () =>{
         firstName:'',
         lastName:'',
         email:'',
-        phone:'',
+        phone:'XXXXXXXXXX',
         password:''
     });
     const {firstName,lastName,email,phone,password}=values;
