@@ -29,6 +29,10 @@ export const saveAuth = ({token,user},next)=>{
     localStorage.setItem('token',JSON.stringify(token));
     next();
 };
+export const logout = ()=>{
+    localStorage.removeItem('authInfo');
+    localStorage.removeItem('token');
+};
 export const isAuthenticated = ()=>{
     if(localStorage.getItem('token')){
         if(localStorage.getItem('authInfo')){

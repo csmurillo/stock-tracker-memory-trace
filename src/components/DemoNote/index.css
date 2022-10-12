@@ -1,0 +1,27 @@
+#demo-note-container{
+    position: absolute;
+    left:0; top:0;
+    width:100vw; height:100vh;
+    background-color: rgba(0, 0, 0, 0.178);
+    z-index: 100;
+}
+#demo-note-modal{
+    background-color: white;
+    padding:1rem;
+    width:40%;
+    border-radius: 5px;
+}
+#demo-note-header{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid lightgray;
+}
+#close-icon:hover{
+    cursor: pointer;
+    line-height: 0;
+    padding: 0; margin: 0;
+}
+#demo-note-body{
+    display: flex;
+    flex-direction: column;
+}

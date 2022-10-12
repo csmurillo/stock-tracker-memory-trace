@@ -12,9 +12,11 @@ import './index.css';
 // slick styles
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import DemoNote from '../../components/DemoNote';
 const Home = () =>{
     return (
         <MainLayout>
+            <DemoNote></DemoNote>
             <div id="home">
                 <div className="row mb-5">
                     <div className="col-xl-6 col-lg-8 col-md-8">

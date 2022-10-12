@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
-import { Link } from 'react-router-dom';
-import { isAuthenticated } from '../../authentication/authApi';
+import { Link, Redirect } from 'react-router-dom';
+import { isAuthenticated, logout } from '../../authentication/authApi';
 import SearchBox from '../SearchBox';
 import NavigationMenu from '../NavigationMenu';
 import Button from '../Button';
@@ -10,6 +10,10 @@ import './index.css';
 const Header = () =>{
     const [menuActive,setMenuActive]=useState(false);
     const { firstName, lastName } = isAuthenticated();
+    const logOff = ()=>{
+        logout();
+        window.location='/';
+    };
     const userNavigate = ()=>(
         <ul id="user-navigate" className="align-self-center d-md-flex d-none mr-4 mb-0">
             <li id="signup" style={{listStyleType:'none'}}>
@@ -48,7 +52,7 @@ const Header = () =>{
                     <Link to="/settings">
                         <button id="security" className="dropdown-item" type="button">Settings</button>
                     </Link>
-                    <button id="logout" className="dropdown-item" type="button">Logout</button>
+                    <button id="logout" className="dropdown-item" type="button" onClick={logOff}>Logout</button>
                 </div>
             </div>
         </div>
