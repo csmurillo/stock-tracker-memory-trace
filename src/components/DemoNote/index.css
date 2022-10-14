@@ -8,7 +8,7 @@
 #demo-note-modal{
     background-color: white;
     padding:1rem;
-    width:40%;
+    width:60%;
     border-radius: 5px;
 }
 #demo-note-header{
@@ -24,4 +24,9 @@
 #demo-note-body{
     display: flex;
     flex-direction: column;
+}
+@media (min-width: 768px) {
+    #demo-note-modal{
+        width:40%;
+    }
 }
