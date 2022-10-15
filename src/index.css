@@ -19,3 +19,18 @@ code {
 .active{
   background-color: white;
 }
+
+
+.overload{
+  overflow-y: scroll;
+}
+.lg-text{
+  font-size: large;
+  font-weight: 500;
+}
+.underline{
+  text-decoration: underline;
+}
+.bold{
+  font-weight: bold;
+}

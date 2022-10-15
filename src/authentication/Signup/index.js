@@ -7,9 +7,9 @@ import MainLayout from '../../layout/MainLayout';
 const Signup = () =>{
     // state: form values
     const [values,setValues] = useState({
-        firstName:'',
-        lastName:'',
-        email:'',
+        firstName:'demo',
+        lastName:'user',
+        email:'user@example.com',
         phone:'1111111111',
         password:''
     });
@@ -70,7 +70,7 @@ const Signup = () =>{
                 <label htmlFor="firstName">First Name:</label>
                 <input id="firstName" name="firstName" type="text" className="form-control"
                     value={values.firstName}
-                    onChange={handleChange}/>
+                    onChange={handleChange} />
                 <div className="text-danger">{firstNameError}</div>
             </div>
             <div className="form-group">
