@@ -14,7 +14,7 @@ const DemoNote = () =>{
                     <GrFormClose id="close-icon" style={{fontSize:30}} onClick={removeDemoNoteModal}/>
                 </div>
                 <div id="demo-note-body">
-                    <p>Note:</p>
+                    <p>Note: </p>
                     <ol className='overload'>
                         <li>
                             <p className='lg-text'>This is a <span className='underline'>DEMO SITE</span> please feel free to use dummy data when creating a profile. Or login with: <span className="bold underline">demouser@example.com</span> password:<span className="bold underline">!@PU9Zr22</span></p>
