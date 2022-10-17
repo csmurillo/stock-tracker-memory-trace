@@ -7,9 +7,9 @@ import MainLayout from '../../layout/MainLayout';
 const Signup = () =>{
     // state: form values
     const [values,setValues] = useState({
-        firstName:'demo',
-        lastName:'user',
-        email:'user@example.com',
+        firstName:'',
+        lastName:'',
+        email:'',
         phone:'1111111111',
         password:''
     });
@@ -82,7 +82,7 @@ const Signup = () =>{
             </div>
             <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input id="email" name="email" type="email" className="form-control"
+                <input id="email" name="email" type="email" className="form-control" placeholder='something@example.com'
                     value={values.email}
                     onChange={handleChange}/>
                  <div className="text-danger">{emailError}</div>

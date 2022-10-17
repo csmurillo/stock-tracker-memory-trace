@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {isAuthenticated} from '../../authentication/authApi';
+import {isAuthenticated,logout} from '../../authentication/authApi';
 import './index.css';
 import { GrMenu,GrFormClose } from "react-icons/gr";
 import {FaUserCircle} from "react-icons/fa";
 const NavigationMenu = ({setMenuActive}) =>{
     const [active, setActive]=useState(false);
+    const { firstName, lastName } = isAuthenticated();
     const menuIconClick = () =>{
         setActive(!active);
         setMenuActive(!active);
@@ -13,6 +14,10 @@ const NavigationMenu = ({setMenuActive}) =>{
     const linkCloseMenu = ()=>{
         setActive(!active);
         setMenuActive(!active);
+    };
+    const logOff = ()=>{
+        logout();
+        window.location='/';
     };
     const userNavigate = ()=>(
         <ul id="user-navigate-mobile" className="container">
@@ -39,7 +44,7 @@ const NavigationMenu = ({setMenuActive}) =>{
                 <div style={{ fontSize:'55px'}}>
                     <FaUserCircle style={{color:'lightgreen'}}/>
                 </div>
-                <div style={{ fontSize:'35px'}}>Angel M</div>
+                <div style={{ fontSize:'35px'}}>{firstName} {lastName}</div>
             </li>
             <Link to="/watchlist" onClick={linkCloseMenu} style={{color:'black',textDecoration:'none'}}>
                 <li className="nav-items link-cont">
@@ -51,13 +56,13 @@ const NavigationMenu = ({setMenuActive}) =>{
                     Account
                 </li>
             </Link>
-            <Link to="/security" onClick={linkCloseMenu} style={{color:'black',textDecoration:'none'}} className="link">
+            <Link to="/settings" onClick={linkCloseMenu} style={{color:'black',textDecoration:'none'}} className="link">
                 <li id="security-mobile" className="nav-items link-cont">
                     Settings
                 </li>
             </Link>
             {/* <Link  style={{color:'black',textDecoration:'none'}}> */}
-                <li id="logout-mobile" className="nav-items link-cont">
+                <li id="logout-mobile" className="nav-items link-cont" onClick={logOff}>
                     Logout
                 </li>
             {/* </Link> */}
