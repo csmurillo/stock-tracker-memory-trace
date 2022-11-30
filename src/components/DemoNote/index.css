@@ -4,6 +4,7 @@
     width:100vw; height:100vh;
     background-color: rgba(0, 0, 0, 0.178);
     z-index: 100;
+    /* min-width:550px; */
 }
 #demo-note-modal{
     background-color: white;

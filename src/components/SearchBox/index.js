@@ -13,7 +13,7 @@ const SearchBox = () =>{
     return (
         <div id="search-box"  className={(mobileSearchActive && searchActiveResize) ? 'search-box-mobile-active':''} onBlur={onSearchQueryBlur}>
             <div className={'d-flex justify-content-end d-md-none '+(mobileSearchActive?'search-active-toggle':'')}>
-                <Button onclick={onSearchMobileFocus} id="search-button" styles={{border: "1px solid lightgray",borderRadius:5,height:'55px',marginRight:'8px',width:'22%', backgroundColor:"white"}}>
+                <Button onclick={onSearchMobileFocus} id="search-button" styles={{border: "1px solid lightgray",borderRadius:5,height:'55px',marginRight:'8px',width:'22%', backgroundColor:"white",minWidth:"50px"}}>
                     <BsSearch style={{color:'lightgreen',fontSize:28}}></BsSearch>
                 </Button>
             </div>

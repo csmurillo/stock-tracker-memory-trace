@@ -13,7 +13,7 @@ const Settings = () =>{
     return (
         <MainLayout>
                 <div className="row">
-                    <div className="security-options-container col-md-4 col-6 mb-3">
+                    <div className="security-options-container col-md-4 col-sm-6 col-12 mb-3">
                         <Link to="profile">
                             <div id="security-option-profile" className="security-options h-100 d-flex flex-column justify-content-center align-items-center border rounded">
                                 <CgProfile id="profile-icon" className="icons"></CgProfile>
@@ -21,7 +21,7 @@ const Settings = () =>{
                             </div>
                         </Link>
                     </div>
-                    <div className="security-options-container col-md-4 col-6 mb-3">
+                    <div className="security-options-container col-md-4 col-sm-6 col-12 mb-3">
                         <Link to="changepassword">
                             <div id="security-option-change-password" className="security-options h-100 d-flex flex-column justify-content-center align-items-center border rounded">
                                 <SiWebauthn id="change-password-icon" className="icons"></SiWebauthn>
@@ -29,7 +29,7 @@ const Settings = () =>{
                             </div>
                         </Link>
                     </div>
-                    <div className="security-options-container col-md-4 col-6 mb-3">
+                    <div className="security-options-container col-md-4 col-sm-6 col-12 mb-3">
                         <Link to="smsalerts">
                             <div id="security-option-enable-alerts" className="security-options h-100 d-flex flex-column justify-content-center align-items-center border rounded">
                                 <MdDialerSip id="enable-alerts-icon" className="icons"></MdDialerSip>
@@ -37,7 +37,7 @@ const Settings = () =>{
                             </div>
                         </Link>
                     </div>
-                    <div className="security-options-container col-md-4 col-6 mb-3">
+                    <div className="security-options-container col-md-4 col-sm-6 col-12 mb-3">
                         <Link to="delete">
                             <div id="security-option-delete-user" className="security-options h-100 d-flex flex-column justify-content-center align-items-center border rounded">
                                 <AiOutlineUserDelete id="delete-user-icon" className="icons"></AiOutlineUserDelete>

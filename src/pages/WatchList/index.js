@@ -30,7 +30,7 @@ const Watchlist = () =>{
                 <div className="row">
                     {
                         watchList && livesPricesLoaded && watchList.map((stocks,i)=>(
-                            <div key={i} class="col-lg-4 col-md-6 col-6 mb-4 d-flex justify-content-center">
+                            <div key={i} class="col-lg-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
                                 <Card stock={stocks} stockName={stocks.tickerName} stockSymbol={stocks.tickerSymbol} stockPrice={livePrices[i].livePrice}
                                     priceTarget={stocks.alertPrice} priceDirection={stocks.alertDirection} stockPriceTargetReached={stocks.priceTargetReached}
                                     stockPriceTargetReachedDate={stocks.datePriceTargetReached} cardUpdate={cardUpdate} cardDelete={cardDelete}>

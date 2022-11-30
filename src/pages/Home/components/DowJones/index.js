@@ -1,7 +1,7 @@
 import Plot from 'react-plotly.js';
 import {HomeContext} from '../../../../context/HomeContext';
 const DowJones = () =>{
-    const {dowJonesPrice,dowJonesDate}=HomeContext();
+    const {graphSize,dowJonesPrice,dowJonesDate}=HomeContext();
     return (
         <div id="dow-jones">
             <div id="dow-jones-graph">
@@ -15,7 +15,7 @@ const DowJones = () =>{
                     marker: {color: 'lightgreen'},
                     }
                 ]}
-                layout={ {width: 520, height: 350, title: {
+                layout={ {width: graphSize, height: 350, title: {
                     text:'Dow Jones',
                     font: {
                     family: 'Glory, sans-serif',

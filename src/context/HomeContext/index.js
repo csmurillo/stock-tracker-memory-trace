@@ -9,6 +9,7 @@ const HomeContext = ()=>{
     const [ dowJonesDate, setDowJonesDate] = useState([]);
     const [ gainerStocks, setGainerStocks ]=useState([]);
     const [ loserStocks, setLoserStocks ]=useState([]);
+    const [graphSize,setGraphSize]=useState();
     // slider settings
     const history=useHistory();
     const [ sliderSettings,setSliderSettings ]= useState({
@@ -42,9 +43,51 @@ const HomeContext = ()=>{
                     slidesToScroll: 1
                 }
             },
-
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
         ]
     });
+    useEffect(()=>{
+        window.addEventListener('resize',resizeGraph);
+        window.onload=resizeGraph();
+        return ()=>{
+            window.removeEventListener('resize',resizeGraph)
+        };
+    },[]);
+    const resizeGraph = ()=>{
+        if(window.innerWidth>=1200){
+            setGraphSize(660);
+        }
+        else if(window.innerWidth>=1057.7){
+            setGraphSize(650);
+        }
+        else if(window.innerWidth>=1045){
+            setGraphSize(750);
+        }
+        else if(window.innerWidth>=1040){
+            setGraphSize(600);
+        }
+        else if(window.innerWidth>=990){
+            setGraphSize(600);
+        }
+        else if(window.innerWidth>=767){
+            setGraphSize(500);
+        }
+        else if(window.innerWidth>=567){
+            setGraphSize(500);
+        }
+        else if(window.innerWidth>=400){
+            setGraphSize(450);
+        }
+        else{
+            setGraphSize(380);
+        }
+    };
     // communcates with stockapi adapter to get live data on dowjones, current top gainer/loser stocks
     useEffect(()=>{
         getDowJones().then(dowjones=>{
@@ -87,7 +130,7 @@ const HomeContext = ()=>{
     const SliderRightArrow = ({ className, style, onClick })=>(
         <div className="right-arrow" onClick={onClick} style={style}><MdKeyboardArrowRight></MdKeyboardArrowRight></div>
     );
-    return {sliderSettings,dowJonesPrice,dowJonesDate,gainerStocks,loserStocks};
+    return {graphSize,sliderSettings,dowJonesPrice,dowJonesDate,gainerStocks,loserStocks};
 };
 
 export {HomeContext};

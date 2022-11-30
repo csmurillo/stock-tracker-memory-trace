@@ -13,7 +13,7 @@ const TopGainerStocks = () =>{
                         {
                             gainerStocks && gainerStocks.map((gainer,i)=>(
                                 <div key={i}>
-                                    <div>
+                                    <div className="d-flex justify-content-center justify-content-sm-start">
                                         <Card companyName={gainer.companyName} tickerSymbol={gainer.ticker} priceChange={gainer.changesPercentage} currentPrice={gainer.price} />
                                     </div>
                                 </div>
@@ -26,3 +26,4 @@ const TopGainerStocks = () =>{
     );
 };
 export {TopGainerStocks};
+

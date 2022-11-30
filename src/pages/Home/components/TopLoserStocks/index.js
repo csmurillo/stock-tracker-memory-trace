@@ -13,7 +13,7 @@ const TopLoserStocks = () =>{
                     {
                         loserStocks && loserStocks.map((loser,i)=>(
                             <div key={i}>
-                                <div>
+                                <div  className="d-flex justify-content-center justify-content-sm-start">
                                     <Card companyName={loser.companyName} tickerSymbol={loser.ticker} priceChange={loser.changesPercentage} currentPrice={loser.price} />
                                 </div>
                             </div>

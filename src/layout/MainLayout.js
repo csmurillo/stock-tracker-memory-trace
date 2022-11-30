@@ -6,6 +6,7 @@ const MainLayout = ({children}) =>{
     return (
         <div id="main-layout">
             <Header></Header>
+            {/* style={{minWidth: 550 + 'px'}}  */}
             <main id="main-content" className="container pt-5 h-100">
                 {children}
             </main>

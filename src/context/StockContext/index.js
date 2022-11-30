@@ -24,7 +24,7 @@ const StockContext = (tickerSymbol,socketLivePrice)=>{
     const [stockTimeMovement, setStockTimeMovement]=useState();
     const [stockPriceMovement, setStockPriceMovement]=useState();
 
-    const [graphSize,setGraphSize]=useState();
+    const [graphSize,setGraphSize]=useState(0);
 
     // use effect for graph resize
     useEffect(()=>{
@@ -64,8 +64,17 @@ const StockContext = (tickerSymbol,socketLivePrice)=>{
         else if(window.innerWidth>=767){
             setGraphSize(670);
         }
+        else if(window.innerWidth>=576){
+            setGraphSize(620);
+        }
+        else if(window.innerWidth>=476){
+            setGraphSize(480);
+        }
+        else if(window.innerWidth>=375){
+            setGraphSize(375);
+        }
         else{
-            setGraphSize(490);
+            setGraphSize(250);
         }
     };
 
