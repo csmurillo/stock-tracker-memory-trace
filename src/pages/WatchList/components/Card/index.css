@@ -1,6 +1,6 @@
 .wl-card{
     border: 2px solid lightgray;
-    max-width:300px; min-height: 200px;
+    max-width:380px; min-height: 200px;
     width:90%; height: 220px;
     border-radius: 15px;
 }
@@ -24,7 +24,7 @@
 }
 /* stock info */
 .wl-stock-name{
-    font-size: 1em;
+    font-size: 1.4em;
     user-select: none;
 }
 .wl-stock-price{
